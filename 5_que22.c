@@ -1,62 +1,29 @@
-/*accept single digit number rom user and print it into word
+/* write a program which accept number from user and print that number till that number
+Input : 8
+Output :1 2 3 4 5 6 7 8
+
+
 */
 
-#include <stdio.h>
+#include <stdio.h.>
 
 void Display(int iNo)
 {
-    if(iNo == 0)
+    
+    int iCnt = 0;
+
+    for(iCnt = 1; iNo >= iCnt; iCnt++)
     {
-        printf("Zero");
-    }
-    else if(iNo == 1)
-    {
-        printf("One");
-    }
-    else if(iNo == 2)
-    {
-        printf("Two");
-    }
-    else if(iNo == 3)
-    {
-        printf("Three");
-    }
-    else if(iNo == 4)
-    {
-        printf("Four");
-    }
-    else if(iNo == 5)
-    {
-        printf("Five");
-    }
-    else if(iNo == 6)
-    {
-        printf("Six");
-    }
-    else if(iNo == 7)
-    {
-        printf("Seven");
-    }
-    else if(iNo == 8)
-    {
-        printf("Eight");
-    }
-    else if(iNo == 9)
-    {
-        printf("Nine");
-    }
-    else
-    {
-        printf("Invalid Input");
+        printf("%d\t" ,iCnt);
+
     }
 }
-
 int main()
 {
     int iValue = 0;
 
-    printf("Enter number : ");
-    scanf("%d", &iValue);
+    printf("Enter number : \n");
+    scanf("%d",&iValue);
 
     Display(iValue);
 
