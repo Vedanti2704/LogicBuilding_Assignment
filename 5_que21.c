@@ -1,25 +1,32 @@
-/*write a program wich accept number from user and if a number is less
-than 50 then print small ,if it is greater than 50 and less than 100 
-then print large
+/*write a program which accept number from user and print that number of $ & * on screen
+
+Input : 5
+Output :$ * $ * $ * $ * $ *
+
+Input : 3
+Output : $ * $ * $ *
+
+Input : -3
+Output :$ * $ * $ *
 */
 
-#include <stdio.h>
+#include <stdio.h.>
 
-void Number(int iNo)
+void Pattern(int iNo)
 {
+    
+    int iCnt = 0;
 
-    if(iNo < 50)
+    if(iNo < 0)
     {
-        printf("small");
+        iNo = -iNo;
     }
-    else if ((iNo < 100) )
+
+    for(iCnt = 0; iNo > iCnt; iCnt++)
     {
-       printf("large"); 
+        printf("$  * \t");
     }
-    
-    
 }
-
 int main()
 {
     int iValue = 0;
@@ -27,7 +34,7 @@ int main()
     printf("Enter number : \n");
     scanf("%d",&iValue);
 
-    Number(iValue);
+    Pattern(iValue);
 
     return 0;
 }
