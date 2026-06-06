@@ -1,40 +1,30 @@
-/*write a program to find the factorial of given nunber
+/* write a program which accept number from user and print its number line
+Input : 8
+Output : -4 -3 -2 -1 0 1 2 3 4 
 
-Input : 5
-Output :120  (5 * 4 * 3 * 2 * 1)
-
-Input : -5
-Output :120  (5 * 4 * 3 * 2 * 1)
-
-Input : 4
-Output :24  ( 4 * 3 * 2 * 1)
 */
 
-#include <stdio.h>
+#include <stdio.h.>
 
-int Factorial(int iNo)
+void Display(int iNo)
 {
+    
     int iCnt = 0;
-    int iMult = 1;
 
-    for(iCnt = 1; iCnt <= iNo ; iCnt++)
+    for(iCnt = -iNo; iNo >= iCnt; iCnt++)
     {
-        iMult = iMult * iCnt;
+        printf("%d\t" ,iCnt);
+
     }
-    return iMult;
-
 }
-
-
 int main()
 {
-    int iValue = 0, iRet = 0;
+    int iValue = 0;
 
-    printf("Enter number : ");
-    scanf("%d", &iValue);
+    printf("Enter number : \n");
+    scanf("%d",&iValue);
 
-    iRet = Factorial(iValue);
-    printf("factorial of number is %d",iRet);
+    Display(iValue);
 
     return 0;
 }
