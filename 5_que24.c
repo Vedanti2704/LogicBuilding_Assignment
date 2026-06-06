@@ -1,19 +1,22 @@
-/* write a program which accept number from user and print its number line
-Input : 8
-Output : -4 -3 -2 -1 0 1 2 3 4 
+/* write a program which accept N number from user and print all odd number up to N
+Input : 18
+Output : 1 3 5 7 9 11 13 
 
 */
 
 #include <stdio.h.>
 
-void Display(int iNo)
+void OddDisplay(int iNo)
 {
     
     int iCnt = 0;
 
-    for(iCnt = -iNo; iNo >= iCnt; iCnt++)
+    for(iCnt = 1; iNo >= iCnt; iCnt++)
     {
-        printf("%d\t" ,iCnt);
+        if((iCnt % 2) != 0)
+        {
+            printf("%d\t",iCnt);
+        }
 
     }
 }
@@ -24,7 +27,7 @@ int main()
     printf("Enter number : \n");
     scanf("%d",&iValue);
 
-    Display(iValue);
+    OddDisplay(iValue);
 
     return 0;
 }
