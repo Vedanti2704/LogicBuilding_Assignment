@@ -1,0 +1,43 @@
+/* Write a program which accept one number and position from user and on that bit .Return modified number.
+ 
+.
+Input : 10      3
+Output : 14
+*/
+
+#include<stdio.h>
+
+typedef unsigned int UINT;
+
+UINT OnBit(UINT iNo, UINT iPos)
+{
+    UINT iMask = 0;
+
+    if((iPos < 1) || (iPos > 32))
+    {
+        return iNo;
+    }
+
+    iMask = 1 << (iPos - 1);
+
+    return (iNo | iMask);
+}
+
+int main()
+{
+    UINT iValue = 0;
+    UINT iPosition = 0;
+    UINT iRet = 0;
+
+    printf("Enter number : ");
+    scanf("%u", &iValue);
+
+    printf("Enter position : ");
+    scanf("%u", &iPosition);
+
+    iRet = OnBit(iValue, iPosition);
+
+    printf("Modified number : %u\n", iRet);
+
+    return 0;
+}
